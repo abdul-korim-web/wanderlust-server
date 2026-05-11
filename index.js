@@ -24,7 +24,7 @@ app.get(`/`,(req,res)=>{
 
 
 
-// routes 
+// routers 
 app.use(`/traveldata`,travelDataRoute)
 
 
