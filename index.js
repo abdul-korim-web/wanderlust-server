@@ -1,10 +1,11 @@
 import express from "express"
 import dotenv from "dotenv"
+import cors from "cors"
 import { travelDataRoute } from "./src/Routes/travelData.js"
 import { databaseConnecttion } from "./src/config/db.js"
 
 const app = express()
-
+app.use(cors())
 dotenv.config()
 //  middelware 
 app.use(express.json())
