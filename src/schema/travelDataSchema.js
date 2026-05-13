@@ -53,6 +53,9 @@ const travelDataSchema = new mongoose.Schema(
       required: true,
       minlength: 20,
     },
+    totalUpdateData:{
+      type:Number
+    }
   },
   {
     timestamps: true,

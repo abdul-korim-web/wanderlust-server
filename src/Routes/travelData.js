@@ -3,6 +3,7 @@ import { addTravelDataControler } from "../controlers/addTravelData.js"
 import { travelDataValidation } from "../middeleware/travelDataCheck.js"
 import { getTravelDataControler } from "../controlers/getTravelData.js"
 import { getSingleTravelDataControler } from "../controlers/getSingleTravelData.js"
+import { updateTravelDataControler } from "../controlers/updateTravelData.js"
 
 
 export const travelDataRoute = express.Router()
@@ -12,3 +13,5 @@ travelDataRoute.get(`/`,getTravelDataControler)
 travelDataRoute.get(`/:id`,getSingleTravelDataControler)
 // create travel data 
 travelDataRoute.post(`/`,travelDataValidation,addTravelDataControler)
+// update travel data 
+travelDataRoute.patch(`/:id`,updateTravelDataControler)
